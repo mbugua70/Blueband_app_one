@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css"
+      type="text/css"
+    /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      class="jsbin"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <!-- <link rel="stylesheet" href="../styles/validation.css" /> -->
+    <!-- <link rel="stylesheet" href="../styles/dropzone.css" /> -->
+    <title>Registration</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <span class="brand-logo center">Registration</span>
+          <a href="../index.html" class="right home-icon" id="home-el">
+            <i class="material-icons">home</i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="card-panel card-relative">
+
+        <form class="form" id="form" enctype="multipart/form-data">
+
+          <label for="ba_name">Name</label>
+          <input
+            type="text"
+            name="ba_name"
+            id="ba_name"
+            placeholder="Enter name"
+          />
+          <label for="ba_phone">Phone Number</label>
+          <input
+            type="tel"
+            name="ba_phone"
+            id="ba_phone"
+            placeholder="Tel e.g 0728**"
+          />
+          <label for="ba_location">Location</label>
+          <input
+            type="text"
+            name="ba_location"
+            id="ba_location"
+            placeholder="Enter location"
+          />
+
+          <span class="flex_button">
+            <button
+              class="btn waves-effect color_change"
+              id="register_button"
+            >
+              REGISTER
+            </button>
+            <!-- <button class="btn waves-effect color_change_two">
+              UPLOAD DATA
+            </button> -->
+          </span>
+        </form>
+      </div>
+    </div>
+    <!-- <script src="../node_modules/dropzone/dist/dropzone-min.js"></script> -->
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/sweet.js"></script>
+    <!-- <script src="../nav/home.js"></script> -->
+    <!-- <script src="../nav/formpre.js"></script> -->
+    <!-- <script src="../nav/validation.js"></script> -->
+    <!-- <script src="../nav/localUpload.js" type="text/javascript"></script> -->
+    <script src="../js/localstorage.js" type="text/javascript"></script>
+    <!-- <script src="../nav/dropzone.js"></script> -->
+  </body>
+</html>

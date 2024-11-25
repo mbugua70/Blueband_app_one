@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <!-- <link rel="stylesheet" href="../styles/validation.css" /> -->
+    <title>Report</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <span class="brand-logo center">Sales</span>
+          <a href="../index.html" class="right home-icon" id="home-el">
+            <i class="material-icons waves-effect waves-dark">home</i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="card-panel">
+        <h4>Personal Information</h4>
+        <div class="profile">
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> person </span>
+              <span class="user_name">Name</span>
+            </div>
+            <span class="user_detail users_input" id="ba_name">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> call </span>
+              <span class="user_phone">Contact</span>
+            </div>
+            <span class="user_phones users_input" id="ba_phone">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> home_pin </span>
+              <span class="user_location">Location</span>
+            </div>
+            <span class="user_locations users_input" id="ba_location">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+
+        </div>
+      </div>
+      <div class="location_gps">
+        <h4 class="">Load your location</h4>
+        <div class="location_gps_two">
+          <input
+            type="number"
+            name="longitude"
+            id="longitude"
+            placeholder="Longitude"
+            readonly
+          />
+          <input
+            type="number"
+            name="latitude"
+            id="latitude"
+            placeholder="Latitude"
+            readonly
+          />
+        </div>
+        <button class="btn location_button" id="btn_location">
+          load
+          <div class="preloader-wrapper small active" id="preloader_one">
+            <div class="spinner-layer spinner-green-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card-panel card-relative">
+
+        <form class="form" id="form">
+          <!-- <div class="location_gps">
+            <h4 class="">Load your location</h4>
+            <div class="location_gps_two">
+              <input
+                type="number"
+                name="longitude"
+                id="longitude"
+                placeholder="Longitude"
+                readonly
+              />
+              <input
+                type="number"
+                name="latitude"
+                id="latitude"
+                placeholder="Latitude"
+                readonly
+              />
+            </div>
+            <button class="btn location_button" id="btn_location">
+              load
+              <div class="preloader-wrapper small active" id="preloader_one">
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div> -->
+          <h4>Fill  the form</h4>
+          <label for="record_date">Date</label>
+          <input
+            class="input"
+            type="date"
+            name="record_date"
+            id="record_date"
+            placeholder="Enter date"
+            required
+          />
+
+          <!-- form 2 -->
+          <label for="type_of_shop">Type of shop</label>
+          <!-- changes for activity column -->
+          <select name="type_of_shop" id="type_of_shop" required>
+            <option value="">Select the shop</option>
+            <option id="retailer_el" value="Retailers Shop">Retailers Shop</option>
+            <option id="retailer_el_two" value="Supermarket">Supermarket</option>
+            <option id="retailer_el_three" value="Bakery">Bakery</option>
+            <option id="retailer_el_four" value="WholeSale">Wholesale</option>
+            <option id="retailer_el_five" value="home">Home/House</option>
+          </select>
+          <label for="outlet_name"
+            >Name</label
+          >
+          <input
+            class="input"
+            type="text"
+            name="outlet_name"
+            id="outlet_name"
+            placeholder="Enter  name"
+            required
+          />
+          <label for="location">Location</label>
+          <input
+            class="input"
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Enter location"
+            required
+          />
+          <label for="nearby_landmark">Nearby landmark</label>
+          <input
+            class="input"
+            type="text"
+            name="nearby_landmark"
+            id="nearby_landmark"
+            placeholder="Enter name"
+            required
+          />
+          <label id="label_name_owner" for="owners_name">Owner Name</label>
+          <input
+            class="input"
+            type="text"
+            name="owners_name"
+            id="owners_name"
+            placeholder="Enter name"
+
+          />
+          <label id="label_contact_owner" for="owners_contact">Owner Contact</label>
+          <input
+            class="input"
+            type="tel"
+            name="owners_contact"
+            id="owners_contact"
+            placeholder="Telephone E.g 0700*"
+
+          />
+          <!-- form 3 -->
+          <h4>LUP</h4>
+          <label for="lup_15g">15g</label>
+          <input
+            class="input"
+            type="number"
+            name="lup_15g"
+            id="lup_15g"
+            placeholder="0"
+            required
+          />
+          <label for="lup_30g">30g</label>
+          <input
+            class="input"
+            type="number"
+            name="lup_30g"
+            id="lup_30g"
+            placeholder="0"
+            required
+          />
+          <label for="lup_100g">100g</label>
+          <input
+            class="input"
+            type="number"
+            name="lup_100g"
+            id="lup_100g"
+            placeholder="0"
+            required
+          />
+          <label for="lup_250g">250g</label>
+          <input
+            class="input"
+            type="number"
+            name="lup_250g"
+            id="lup_250g"
+            placeholder="0"
+            required
+          />
+          <label for="lup_500g">500g</label>
+          <input
+            class="input"
+            type="number"
+            name="lup_500g"
+            id="lup_500g"
+            placeholder="0"
+            required
+          />
+          <label for="lup_1kg">1KG</label>
+          <input
+            class="input"
+            type="number"
+            name="lup_1kg"
+            id="lup_1kg"
+            placeholder="0"
+            required
+          />
+
+         <h4>Spread for bread</h4>
+
+          <label for="sfb_100g">100g</label>
+          <input
+            class="input"
+            type="number"
+            name="sfb_100g"
+            id="sfb_100g"
+            placeholder="0"
+            required
+          />
+          <label for="sfb_250g">250g</label>
+          <input
+            class="input"
+            type="number"
+            name="sfb_250g"
+            id="sfb_250g"
+            placeholder="0"
+            required
+          />
+          <label for="sfb_500g">500g</label>
+          <input
+            class="input"
+            type="number"
+            name="sfb_500g"
+            id="sfb_500g"
+            placeholder="0"
+            required
+          />
+
+          <h4>Gifts</h4>
+          <!-- changes for activity column -->
+            <select name="gifts" id="gifts" required>
+              <option value="">Select gift</option>
+              <option value="caps">Caps</option>
+              <option value="aprons">Aprons</option>
+              <option value="kitchn towels">Kitchen towels</option>
+              <option value="coin purse">Coin purse</option>
+              <option value="water bottle">Water bottle</option>
+              <option value="pens">Pens</option>
+              <option value="lu 15g">LUP 15g</option>
+
+            </select>
+
+
+
+          <button class="btn-large">
+            submit <i class="material-icons ">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/sweet.js"></script>
+    <!-- <script src="../nav/home.js"></script> -->
+    <script src="../nav/localUpload.js"></script>
+    <script src="../nav/formReport.js"></script>
+    <script src="../nav/location.js"></script>
+  </body>
+</html>
